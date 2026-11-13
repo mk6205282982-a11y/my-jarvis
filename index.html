@@ -1,0 +1,85 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MY JARVIS AI</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="app">
+
+    <header>
+        <span class="online"></span>
+        JARVIS SYSTEM ONLINE
+    </header>
+
+    <h1>J.A.R.V.I.S</h1>
+    <p class="subtitle">YOUR PERSONAL AI ASSISTANT</p>
+
+    <div class="reactor" id="reactor">
+        <div class="ring ring1"></div>
+        <div class="ring ring2"></div>
+        <div class="core">J</div>
+    </div>
+
+    <p id="status">SYSTEM READY</p>
+
+    <div class="controls">
+        <button id="micButton">🎤 Start Listening</button>
+        <button id="stopButton" class="stop">■ Stop</button>
+    </div>
+
+    <div class="settings">
+        <label>Language:</label>
+        <select id="language">
+            <option value="en-IN">English</option>
+            <option value="hi-IN">Hindi</option>
+        </select>
+    </div>
+
+    <div class="api-box">
+        <input type="password" id="apiKey"
+        placeholder="Enter your OpenAI API key">
+
+        <button id="saveKey">Save API Key</button>
+        <small>Private browser demo only. Do not share this key.</small>
+    </div>
+
+    <div class="chat" id="chat">
+        <div class="message bot">
+            Hello! I am JARVIS. How can I help you?
+        </div>
+    </div>
+
+    <div class="input-area">
+        <input type="text" id="userInput"
+        placeholder="Ask anything to JARVIS...">
+
+        <button id="sendButton">Send</button>
+    </div>
+
+    <div class="quick-actions">
+        <button data-command="What is the time?">🕒 Time</button>
+        <button data-command="What is today's date?">📅 Date</button>
+        <button data-command="Open Google">🌐 Google</button>
+        <button data-command="Open YouTube">▶ YouTube</button>
+        <button data-command="Who are you?">🤖 About</button>
+    </div>
+
+    <button id="clearButton" class="clear">
+        Clear Chat
+    </button>
+
+    <footer>
+        MY JARVIS AI | HTML CSS JAVASCRIPT
+    </footer>
+
+</div>
+
+<script src="script.js"></script>
+
+</body>
+</html>

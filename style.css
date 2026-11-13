@@ -1,0 +1,225 @@
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    min-height: 100vh;
+    padding: 25px 12px;
+    background: radial-gradient(circle, #123657, #020813 75%);
+    color: #e5faff;
+    font-family: Arial, sans-serif;
+}
+
+.app {
+    max-width: 850px;
+    margin: auto;
+    padding: 25px;
+    text-align: center;
+    border: 1px solid #1688a9;
+    border-radius: 22px;
+    background: rgba(3, 13, 29, 0.95);
+    box-shadow: 0 0 35px #007baf55;
+}
+
+header {
+    color: cyan;
+    font-size: 12px;
+    letter-spacing: 3px;
+}
+
+.online {
+    display: inline-block;
+    height: 9px;
+    width: 9px;
+    border-radius: 50%;
+    background: #00ff9d;
+    box-shadow: 0 0 12px #00ff9d;
+}
+
+h1 {
+    font-size: clamp(40px, 9vw, 65px);
+    letter-spacing: 8px;
+    color: #52eaff;
+    text-shadow: 0 0 25px #00aaff;
+    margin-bottom: 5px;
+}
+
+.subtitle {
+    color: #8faec8;
+    font-size: 12px;
+    letter-spacing: 3px;
+}
+
+.reactor {
+    position: relative;
+    width: 180px;
+    height: 180px;
+    margin: 40px auto 20px;
+    display: grid;
+    place-items: center;
+}
+
+.core {
+    width: 85px;
+    height: 85px;
+    border-radius: 50%;
+    display: grid;
+    place-items: center;
+    background: radial-gradient(circle, #c8ffff, #008ab7);
+    color: #001321;
+    font-size: 40px;
+    font-weight: bold;
+    box-shadow: 0 0 30px cyan;
+}
+
+.ring {
+    position: absolute;
+    border: 2px solid #45eaff;
+    border-radius: 50%;
+    box-shadow: 0 0 15px #00cfff;
+}
+
+.ring1 {
+    width: 140px;
+    height: 140px;
+    border-style: dashed;
+    animation: rotate 8s linear infinite;
+}
+
+.ring2 {
+    width: 175px;
+    height: 175px;
+    border-color: #148dff;
+    animation: rotate 12s linear infinite reverse;
+}
+
+@keyframes rotate {
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+.reactor.active .core {
+    box-shadow: 0 0 55px cyan;
+    transform: scale(1.1);
+}
+
+#status {
+    color: cyan;
+    letter-spacing: 2px;
+}
+
+.controls,
+.settings,
+.input-area,
+.quick-actions {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    flex-wrap: wrap;
+    margin: 20px 0;
+}
+
+button,
+select,
+input {
+    padding: 12px 16px;
+    border-radius: 9px;
+    font-size: 14px;
+}
+
+button {
+    border: none;
+    background: cyan;
+    color: #001522;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+button:hover {
+    box-shadow: 0 0 16px cyan;
+}
+
+.stop,
+.clear {
+    background: #193b55;
+    color: white;
+    border: 1px solid #3b7593;
+}
+
+select,
+input {
+    background: #10253b;
+    border: 1px solid #28617d;
+    color: white;
+}
+
+.api-box {
+    display: grid;
+    gap: 10px;
+    max-width: 500px;
+    margin: 20px auto;
+}
+
+.api-box small {
+    color: #9bb2c8;
+}
+
+.chat {
+    height: 300px;
+    overflow-y: auto;
+    text-align: left;
+    padding: 15px;
+    background: #061426;
+    border: 1px solid #16435f;
+    border-radius: 12px;
+}
+
+.message {
+    padding: 12px;
+    margin-bottom: 12px;
+    border-radius: 10px;
+    line-height: 1.5;
+    white-space: pre-wrap;
+    overflow-wrap: anywhere;
+}
+
+.bot {
+    background: #10314a;
+    border-left: 3px solid cyan;
+}
+
+.user {
+    background: #163d35;
+    border-left: 3px solid #00e8a0;
+}
+
+.input-area input {
+    flex: 1;
+    min-width: 180px;
+}
+
+.quick-actions button {
+    font-size: 12px;
+    padding: 10px;
+}
+
+footer {
+    margin-top: 25px;
+    color: #7892a9;
+    font-size: 11px;
+    letter-spacing: 1px;
+}
+
+@media(max-width: 500px) {
+    .app {
+        padding: 17px 12px;
+    }
+
+    .chat {
+        height: 250px;
+    }
+}
